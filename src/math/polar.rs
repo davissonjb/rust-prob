@@ -6,3 +6,13 @@
  * Modified:         1 MARCH 2022
  */
 
+//
+//
+//
+//
+pub struct Polar<T>
+{
+    a: T,
+    b: T,
+}
+
