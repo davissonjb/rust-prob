@@ -6,6 +6,8 @@
  * Origination:     1 MARCH 2022
  * Modified:         1 MARCH 2022
  */
+mod math;
+
 fn main() {
     println!("Hello, world!");
 }
