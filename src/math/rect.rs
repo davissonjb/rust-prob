@@ -10,8 +10,8 @@ use std::ops::{Add, Sub, Mul, Div};
 
  pub struct rect<T>
  {
-    x: T,
-    y: T,
+    a: T,
+    b: T,
  }
 
  impl<T: Add<Output = T>> Add for rect<T>
@@ -19,7 +19,7 @@ use std::ops::{Add, Sub, Mul, Div};
     type Output = Self;
     fn add(self, other: Self) -> Self
     {
-       Self {x: self.x + other.x, y: self.y + other.y}
+       Self {a: self.a + other.a, b: self.b + other.b}
     }
  }
 
@@ -28,6 +28,6 @@ use std::ops::{Add, Sub, Mul, Div};
     type Output = Self;
     fn sub(self, other: Self) -> Self
     {
-       Self {x: self.x - other.x, y: self.y - other.y}
+       Self {a: self.a - other.a, b: self.b - other.b}
     }
  }
