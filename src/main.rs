@@ -7,7 +7,10 @@
  * Modified:         1 MARCH 2022
  */
 mod math;
+use math::polar::Polar;
 
 fn main() {
+    let a: Polar::<f64> = Polar::<f64> {mag: 2.0, ang: 30.0};
+    println!("Magnitude: {} -- Angle: {}", a.Mag(), a.Ang());
     println!("Hello, world!");
 }

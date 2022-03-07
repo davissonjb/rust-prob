@@ -14,23 +14,23 @@ use std::ops::{Add, Sub, Mul, Div};
 //
 pub struct Polar<T>
 {
-    mag: T,
-    ang: T,
+    pub mag: T,
+    pub ang: T,
 }
 
-impl<T: Sub> Polar<T>
+impl<T: Sub + Copy> Polar<T>
 {
-    fn conj(self) -> Self
+    pub fn conj(&self) -> Self
     {
         Self {mag: self.mag, ang: self.ang}
     }
 
-    fn Mag(self) -> T
+    pub fn Mag(&self) -> T
     {
         self.mag
     }
 
-    fn Ang(self) -> T
+    pub fn Ang(&self) -> T
     {
         self.ang
     }
