@@ -1,9 +1,13 @@
+#![allow(non_snake_case)]
+#![allow(non_camel_case_types)]
+#![allow(unused)]
+#![allow(dead_code)]
 /**
- * File:                 polar.rs
- * Author:            Jacob B Davisson
+ * File:            polar.rs
+ * Author:          Jacob B Davisson
  * Purpose:         Encapsulate functionality for polar data types
  * Origination:     1 MARCH 2022
- * Modified:         1 MARCH 2022
+ * Modified:        26 JUNE 2023
  */
 
 use std::ops::{Add, Sub, Mul, Div};
@@ -20,17 +24,32 @@ pub struct Polar<T>
 
 impl<T: Sub + Copy> Polar<T>
 {
+    ///
+    /// Function: pub fn conj(&self) -> Self 
+    /// Purpose: Apply conjugation to complex number
+    ///          in polar form.
+    /// 
     pub fn conj(&self) -> Self
     {
         Self {mag: self.mag, ang: self.ang}
     }
 
-    pub fn Mag(&self) -> T
+    ///
+    /// Function: pub fn mag(&self) -> Self 
+    /// Purpose: Return magnitude of Polar form 
+    ///          complex number.
+    /// 
+    pub fn mag(&self) -> T
     {
         self.mag
     }
 
-    pub fn Ang(&self) -> T
+    ///
+    /// Function: pub fn ang(&self) -> T
+    /// Purpose: Return angle of Polar form
+    ///          complex number.
+    ///
+    pub fn ang(&self) -> T
     {
         self.ang
     }
