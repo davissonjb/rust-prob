@@ -1,3 +1,11 @@
+//!
+//! File:            prob-stats/math/src/rect.rs
+//! Author:          Jacob B Davisson
+//! Purpose:         Encapsulate functionality for rectangular data types
+//! Origination:     1 March 2024    
+//! Modified:        22 April 2024
+//!
+
 #![allow(non_snake_case)]
 #![allow(non_camel_case_types)]
 #![allow(unused)]
@@ -6,14 +14,6 @@
 use crate::scalar::*;
 use num::rational::*;
 use std::ops::{Add, Div, Mul, Sub};
-
-/**
- * File:            rect.rs
- * Author:          Jacob B Davisson
- * Purpose:         Encapsulate functionality for rectangular data types
- * Origination:     1 MARCH 2022
- * Modified:        23 Februaty 2024
- */
 
 pub struct Rect<T: num::Float + Default> {
     a: Scalar<T>,
