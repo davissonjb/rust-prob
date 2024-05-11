@@ -12,5 +12,3 @@
 #![allow(dead_code)]
 
 use num::rational::*;
-
-pub trait NumType: num::Float + Default + Display {}

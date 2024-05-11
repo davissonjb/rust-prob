@@ -15,10 +15,10 @@ use crate::scalar::*;
 use num::rational::*;
 use std::ops::{Add, Div, Mul, Sub};
 
-pub struct Rect<T: num::Float + Default> {
-    a: Scalar<T>,
-    b: Scalar<T>,
-}
+// pub struct Rect<T: num::Float + Default> {
+//     a: Scalar<T>,
+//     b: Scalar<T>,
+// }
 
 /*
  * ---------------------------------------------------------------------------------

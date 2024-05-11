@@ -5,7 +5,7 @@
 //! Origination:     23 February 2024
 //! Modified:        23 February 2024
 //!
-pub mod mathtype;
+pub mod numtype;
 pub mod polar;
 pub mod rect;
 pub mod scalar;
