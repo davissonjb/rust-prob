@@ -3,7 +3,7 @@
 //! Author:          Jacob B Davisson
 //! Purpose:         Encapsulate functionality for rectangular data types
 //! Origination:     1 March 2022     
-//! Modified:        22 April 2024   
+//! Modified:        10 May 2024     
 //!
 
 #![allow(non_snake_case)]
@@ -11,46 +11,35 @@
 #![allow(unused)]
 #![allow(dead_code)]
 
+use crate::numtype::*;
+use crate::rect::*;
+use crate::scalar::*;
 use std::ops::{Add, Div, Mul, Sub};
 
 //
 //
 //
 //
-pub struct Polar<T> {
-    pub mag: T,
-    pub ang: T,
+pub struct Polar<T: NumType> {
+    mag: Scalar<T>,
+    ang: Scalar<T>,
 }
 
-impl<T: Sub + Copy> Polar<T> {
-    ///
-    /// Function: pub fn conj(&self) -> Self
-    /// Purpose: Apply conjugation to complex number
-    ///          in polar form.
-    ///
-    pub fn conj(&self) -> Self {
-        Self {
-            mag: self.mag,
-            ang: self.ang,
+impl<T: NumType> Polar<T> {
+    pub fn new() -> Self {
+        Polar {
+            mag: Scalar::<T>::new(),
+            ang: Scalar::<T>::new(),
         }
     }
 
-    ///
-    /// Function: pub fn mag(&self) -> Self
-    /// Purpose: Return magnitude of Polar form
-    ///          complex number.
-    ///
-    pub fn mag(&self) -> T {
-        self.mag
+    pub fn set(&mut self, m: Scalar<T>, a: Scalar<T>) -> () {
+        self.mag = m;
+        self.ang = a;
     }
 
-    ///
-    /// Function: pub fn ang(&self) -> T
-    /// Purpose: Return angle of Polar form
-    ///          complex number.
-    ///
-    pub fn ang(&self) -> T {
-        self.ang
+    pub fn setnew(&self, m: Scalar<T>, a: Scalar<T>) -> Polar<T> {
+        Polar { mag: m, ang: a }
     }
 }
 
